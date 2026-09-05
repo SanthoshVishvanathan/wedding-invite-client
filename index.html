@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Umesh &amp; Sandhya — Wedding Invitation</title>
+<meta name="description" content="You are cordially invited to the wedding of Umesh and Sandhya, 17th September 2026, Lena Alamelu Mahal." />
+
+<!-- Fonts: Yatra One (festive display) + Mukta (clean Tamil-friendly body) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Mukta:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Leaflet map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ============ TOP KOLAM STRIP ============ -->
+<div class="kolam-strip" aria-hidden="true">
+  <svg viewBox="0 0 800 40" preserveAspectRatio="none"><use href="#kolam-pattern"></use></svg>
+</div>
+
+<!-- ============ HERO / PAGE 1 ============ -->
+<header class="panel hero" id="home">
+  <div class="hero-bg" style="background-image:url('assets/couple.jpg');"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="panel-inner">
+    <p class="eyebrow-om" aria-hidden="true">॥ ஸ்ரீ ॥</p>
+    <h1 class="wedding-title">Wedding</h1>
+
+    <div class="kalasham" aria-hidden="true">
+      <svg viewBox="0 0 100 120" width="52" height="62">
+        <use href="#kalasham-icon"></use>
+      </svg>
+    </div>
+
+    <div class="couple-photo-frame">
+      <img src="assets/couple.jpg" alt="Umesh and Sandhya" class="couple-photo" />
+    </div>
+
+    <h2 class="couple-names">
+      <span>Umesh</span>
+      <span class="amp" aria-hidden="true">
+        <svg viewBox="0 0 60 60" width="34" height="34"><use href="#lotus-mini"></use></svg>
+      </span>
+      <span>Sandhya</span>
+    </h2>
+
+    <p class="hero-sub">are tying the sacred knot</p>
+
+    <div class="date-strip">
+      <span class="date-day">Thu</span>
+      <span class="date-num">17</span>
+      <span class="date-month">September&nbsp;2026</span>
+    </div>
+
+    <a href="#details" class="scroll-cue" aria-label="Scroll to details">
+      <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 4v14M6 12l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</header>
+
+<!-- ============ INVITATION LINE / PAGE 2 ============ -->
+<section class="panel invite-line">
+  <div class="panel-inner narrow">
+    <svg class="divider" viewBox="0 0 200 20" width="140"><use href="#leaf-divider"></use></svg>
+    <p class="invite-copy">
+      With the blessings of our elders and the grace of the almighty,
+      the families of the bride and groom joyfully invite you
+      to witness the union of
+    </p>
+    <p class="invite-names">Umesh &amp; Sandhya</p>
+    <p class="invite-copy">
+      in holy matrimony, and to shower the couple with your love
+      and blessings as they begin this new journey together.
+    </p>
+    <svg class="divider" viewBox="0 0 200 20" width="140"><use href="#leaf-divider"></use></svg>
+  </div>
+</section>
+
+<!-- ============ EVENT DETAILS / PAGE 3 ============ -->
+<section class="panel details" id="details">
+  <div class="hero-bg dim" style="background-image:url('assets/couple.jpg');"></div>
+  <div class="hero-overlay light"></div>
+
+  <div class="panel-inner">
+    <p class="section-label">Muhurtham</p>
+    <h3 class="section-title">Ceremony Details</h3>
+
+    <div class="detail-cards">
+      <div class="detail-card">
+        <svg viewBox="0 0 48 48" width="30" height="30"><use href="#icon-calendar"></use></svg>
+        <p class="detail-heading">Date</p>
+        <p class="detail-text">Thursday, 17th September 2026</p>
+      </div>
+      <div class="detail-card">
+        <svg viewBox="0 0 48 48" width="30" height="30"><use href="#icon-clock"></use></svg>
+        <p class="detail-heading">Muhurtham Time</p>
+        <p class="detail-text">10:30 AM onwards</p>
+      </div>
+      <div class="detail-card">
+        <svg viewBox="0 0 48 48" width="30" height="30"><use href="#icon-mahal"></use></svg>
+        <p class="detail-heading">Venue</p>
+        <p class="detail-text">Lena Alamelu Mahal</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VENUE / MAP / PAGE 4 ============ -->
+<section class="panel venue" id="venue">
+  <div class="panel-inner">
+    <p class="section-label">Join us at</p>
+    <h3 class="section-title">Lena Alamelu Mahal</h3>
+    <p class="venue-hint">Tap the temple icon on the map to open the exact location in Google Maps.</p>
+
+    <div id="venue-map" role="application" aria-label="Map showing Lena Alamelu Mahal location"></div>
+
+    <a class="directions-btn"
+       href="https://www.google.com/maps/search/?api=1&query=9.921538648604315,78.60753050514693"
+       target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 21s-7-6.2-7-11.5C5 5.4 8.1 2 12 2s7 3.4 7 7.5C19 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2.4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+      Get Directions
+    </a>
+  </div>
+</section>
+
+<!-- ============ BLESSING / FOOTER / PAGE 5 ============ -->
+<footer class="panel blessing">
+  <div class="hero-bg" style="background-image:url('assets/couple.jpg');"></div>
+  <div class="hero-overlay dark"></div>
+
+  <div class="panel-inner">
+    <svg class="peacock" viewBox="0 0 120 120" width="70" height="70" aria-hidden="true"><use href="#peacock-icon"></use></svg>
+
+    <p class="blessing-quote">
+      "Two souls, two families, one sacred bond &mdash;<br/>
+      may your life together be as fragrant as jasmine
+      and as enduring as the banyan tree."
+    </p>
+
+    <p class="rsvp-copy">We cordially invite you and your family<br/>to bless the couple with your presence.</p>
+
+    <p class="hosts">With love,<br/>Families of Umesh &amp; Sandhya</p>
+
+    <div class="kolam-strip small" aria-hidden="true">
+      <svg viewBox="0 0 800 40" preserveAspectRatio="none"><use href="#kolam-pattern"></use></svg>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ SVG SPRITE (icons + motifs used with <use>) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+
+  <g id="kolam-pattern">
+    <!-- repeating dot-and-loop kolam strip -->
+    <g fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M0 20 Q20 0 40 20 Q60 40 80 20 Q100 0 120 20 Q140 40 160 20 Q180 0 200 20 Q220 40 240 20 Q260 0 280 20 Q300 40 320 20 Q340 0 360 20 Q380 40 400 20 Q420 0 440 20 Q460 40 480 20 Q500 0 520 20 Q540 40 560 20 Q580 0 600 20 Q620 40 640 20 Q660 0 680 20 Q700 40 720 20 Q740 0 760 20 Q780 40 800 20"/>
+    </g>
+    <g fill="currentColor">
+      <circle cx="0" cy="20" r="2.6"/><circle cx="40" cy="20" r="2.6"/><circle cx="80" cy="20" r="2.6"/>
+      <circle cx="120" cy="20" r="2.6"/><circle cx="160" cy="20" r="2.6"/><circle cx="200" cy="20" r="2.6"/>
+      <circle cx="240" cy="20" r="2.6"/><circle cx="280" cy="20" r="2.6"/><circle cx="320" cy="20" r="2.6"/>
+      <circle cx="360" cy="20" r="2.6"/><circle cx="400" cy="20" r="2.6"/><circle cx="440" cy="20" r="2.6"/>
+      <circle cx="480" cy="20" r="2.6"/><circle cx="520" cy="20" r="2.6"/><circle cx="560" cy="20" r="2.6"/>
+      <circle cx="600" cy="20" r="2.6"/><circle cx="640" cy="20" r="2.6"/><circle cx="680" cy="20" r="2.6"/>
+      <circle cx="720" cy="20" r="2.6"/><circle cx="760" cy="20" r="2.6"/><circle cx="800" cy="20" r="2.6"/>
+    </g>
+  </g>
+
+  <g id="kalasham-icon">
+    <path d="M50 8c-10 0-16 8-16 8h32s-6-8-16-8z" fill="currentColor"/>
+    <path d="M30 20h40l-2 10H32z" fill="currentColor"/>
+    <path d="M32 32c0 26 4 46 18 46s18-20 18-46z" fill="currentColor"/>
+    <path d="M20 32h60" stroke="currentColor" stroke-width="3"/>
+    <path d="M50 2v6" stroke="currentColor" stroke-width="3"/>
+    <path d="M42 44c4 4 12 4 16 0" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="1.5"/>
+  </g>
+
+  <g id="lotus-mini">
+    <g fill="currentColor">
+      <ellipse cx="30" cy="18" rx="6" ry="12"/>
+      <ellipse cx="30" cy="18" rx="6" ry="12" transform="rotate(45 30 18)"/>
+      <ellipse cx="30" cy="18" rx="6" ry="12" transform="rotate(90 30 18)"/>
+      <ellipse cx="30" cy="18" rx="6" ry="12" transform="rotate(135 30 18)"/>
+      <ellipse cx="30" cy="18" rx="6" ry="12" transform="rotate(-45 30 18)"/>
+    </g>
+    <circle cx="30" cy="18" r="4" fill="#fff" fill-opacity=".85"/>
+  </g>
+
+  <g id="leaf-divider">
+    <path d="M0 10h70" stroke="currentColor" stroke-width="1.4"/>
+    <path d="M100 10c6-8 16-8 20 0-4 8-14 8-20 0z" fill="currentColor"/>
+    <path d="M130 10h70" stroke="currentColor" stroke-width="1.4"/>
+  </g>
+
+  <g id="icon-calendar">
+    <rect x="6" y="10" width="36" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M6 18h36" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M14 6v8M34 6v8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="16" cy="27" r="2.2" fill="currentColor"/><circle cx="24" cy="27" r="2.2" fill="currentColor"/>
+    <circle cx="32" cy="27" r="2.2" fill="currentColor"/><circle cx="16" cy="35" r="2.2" fill="currentColor"/>
+    <circle cx="24" cy="35" r="2.2" fill="currentColor"/>
+  </g>
+
+  <g id="icon-clock">
+    <circle cx="24" cy="24" r="18" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M24 13v11l8 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g id="icon-mahal">
+    <path d="M24 4l7 8H17z" fill="currentColor"/>
+    <rect x="20" y="12" width="8" height="6" fill="currentColor"/>
+    <path d="M10 44V24l14-10 14 10v20z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M20 44V30h8v14" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M6 44h36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <g id="peacock-icon">
+    <g fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M60 70c-16-6-26-22-22-38 8 4 12 14 12 14s2-16 16-20c6 12 2 26-6 32 8-2 18 2 22 10-10 6-16 4-22 2z"/>
+      <circle cx="60" cy="70" r="16"/>
+    </g>
+    <circle cx="55" cy="66" r="3" fill="currentColor"/>
+    <path d="M60 86c-4 8-4 16 0 22M52 84c-6 6-8 14-6 22M68 84c6 6 8 14 6 22" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M58 54c0-6 2-10 2-10s2 4 2 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <g id="mahal-marker">
+    <circle cx="24" cy="24" r="22" fill="#8a1c2b"/>
+    <path d="M24 8l7 7H17z" fill="#f2c65c"/>
+    <rect x="20" y="15" width="8" height="5" fill="#f2c65c"/>
+    <path d="M12 37V22l12-8 12 8v15z" fill="none" stroke="#f2c65c" stroke-width="2.2" stroke-linejoin="round"/>
+    <path d="M20 37V27h8v10" fill="none" stroke="#f2c65c" stroke-width="2.2"/>
+  </g>
+
+</defs>
+</svg>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
